@@ -1,0 +1,21 @@
+<h2><%= "Welcome User : #{@first_name}"%></h2>
+
+<h2 class="h1_welcome"><%= "Welcome \" #{@first_name}\" "%></h2>
+<p class="h1_welcome">(Select a user in the browser to test: Ex: /welcome/Leo)</p>
+
+<h1 class="h1_welcome">Here you can see all the Gossips!</h1>
+<h3 class="h1_welcome"><%= "Today you can find #{@gossip_count} gossips" %></h3>
+<hr>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title"><%= gossip.title %></h5>
+        <p class="card-text"><%= gossip.user.first_name %></p>
+        <%= link_to "Rumor n°#{index + 1}", dyn_pages_rumor_path(index + 1), class:"btn btn-primary" %>
+      </div>
+    </div>
+    <br/>
+  </div>
+  <% end %>
+</div> 
